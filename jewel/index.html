@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <title>Les bijoux a gogo</title>
+</head>
+<body>
+    <div class="btn">
+        <img src="img/index/arrow-up-solid.svg" class="arrow">
+    </div>
+    <!-- Menu -->
+    <header class="container row">
+        <a href="#" class="logo"><img src="img/index/logo.png" alt="Logo"></a>
+        <button class="toggleMenu" onclick="toggleMenu();"></button>
+        <nav class="navigation row">
+            <ul class="row">
+                <li><a href="#">Home</a></li>
+                <li><a href="catalogue.html">Bijoux</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Section principale -->
+        <section class="hero-bg">
+            <img src="img/index/fond.jpg" alt="fond" class="fond">
+            <div class="hero row flex container"></div>
+                <div class="hero-content">
+                    <h1>Découvrez toutes les créations</h1>
+                    <p>Chaque bijoux que nous créons est une boîte, un réceptacle, qui renfermera dans sont âme future le souvenir d'un sourire, d'une larme de bonheur.</p>
+                    <a href="catalogue.html" class="explore">Explore</a>
+                </div>
+
+                <div class="hero-img"><img src="img/index/dfef.png" alt="png"></div>
+            </div>
+        </section>
+        <!-- Premier bijoux -->
+        <section class="popular container">
+            <div class="row flex">
+                <div class="popular-content">
+                    <h2>Voici les broches car c'est beau</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi exercitationem laborum a libero temporibus ipsa omnis vitae sunt dolor est architecto ex ullam hic voluptatem enim laudantium, excepturi dignissimos cumque.</p>
+                    <a href="catalogue.html#broche" class="explore">Explore</a>
+                </div>
+                <div class="popular-img"><img src="img/index/2.png" alt="broche"></div>
+            </div>
+            <div class="row flex">
+                <div class="popular-content">
+                    <h2>Voici les bracelets car c'est beau</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi exercitationem laborum a libero temporibus ipsa omnis vitae sunt dolor est architecto ex ullam hic voluptatem enim laudantium, excepturi dignissimos cumque.</p>
+                    <a href="catalogue.html#bracelet" class="explore">Explore</a>
+                </div>
+                <div class="popular-img"><img src="img/index/bague_main.png" alt="bracelet"></div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="contact">
+            <div class="contact-info">
+                <h2>Contact</h2>
+                <div class="social-icons">
+                    <div class="social-icon">
+                        <img src="img/index/gmail.png" alt="LinkedIn">
+                        <p>g.dumondel@hotmail.com</p>
+                    </div>
+                    <div class="social-icon">
+                        <a href="https://www.linkedin.com/in/geoffreydumondel/"><img src="img/index/linkedin.png" alt="linkedin"></a>
+                        <p>Linkedin</p>
+                    </div>
+                    <div class="social-icon">
+                        <a href="https://www.instagram.com/geoffrey.dmdl/"><img src="img/index/instagram.png" alt="instagram"></a>
+                        <p>Instagram</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form">
+                <div class="form-field">
+                    <label for="name">Nom</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-field">
+                    <label for="surname">Prénom</label>
+                    <input type="text" id="surname" name="surname" required>
+                </div>
+                <div class="form-field">
+                    <label for="email">Adresse Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-field">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit">Envoyer</button>
+            </div>
+        </section>
+        
+    </main>
+    <footer class="footer" id="contact">
+        <div class="container-footer">
+            <div class="row-footer">
+                <div class="footer-col">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="img/index/CV_Dumondel_Geoffrey.pdf">curriculum vitae</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Ressources</h4>
+                    <ul>
+                        <li><a href="img/index/DUMONDEL_Geoffrey_Portfolio.pdf">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Catalogue</h4>
+                    <ul>
+                        <li><a href="catalogue.html#broche">broches</a></li>
+                        <li><a href="catalogue.html#bracelet">bracelets</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/geoffrey.dmdl/"><img src="img/index/instablack.png" alt="instagram"></a>
+                        <a href="https://www.linkedin.com/in/geoffreydumondel/"><img src="img/index/linkblack.png" alt="linkedin"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <div class="footerbottom">
+        <p>Copyright &copy;2023. Designed by Guillard Yvann Erick. All right reserved</p>
+    </div>
+</body>
+    <script src="js.js"></script>
+</html>

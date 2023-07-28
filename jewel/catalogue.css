@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap');
+
+
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    color: var(--varb);
+}
+
+body{
+    --varb : #fff;
+    --varn : #252525;
+    background: var(--varn)
+}
+
+img{
+    display: flex;
+    height: 300px;
+}
+
+a{
+    display: inline-block;
+    text-decoration: none;
+    transition: 0.5s ease-in-out;
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -ms-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    color: var(--varb);
+}
+
+.row{
+    display: flex;
+}
+
+.flex{
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.flex>*{
+    flex: 1 1 30rem;
+}
+
+
+
+/*btn pour remonter en haut de la page*/
+.btn{
+    height: 50px;
+    width: 50px;
+    background: var(--varb);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    cursor: pointer;
+    z-index: 1500;
+    animation-name: bounce;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+}
+
+.arrow{
+    width: 25px;
+}
+
+@keyframes bounce {
+    0%{
+        bottom: 40px;
+    }
+    50%{
+        bottom: 50px;
+    }
+    100%{
+        bottom: 40px;
+    }
+    
+}
+
+
+/***************** Menu *******************/
+
+header{
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.logo img{
+    max-width: 165px;
+    object-fit: contain;
+}
+
+.toggleMenu{
+    display: none;
+}
+
+nav{
+    align-items: center;
+    gap: 2rem;
+}
+
+nav ul{
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+}
+
+nav ul a{
+    position: relative;
+    font-size: 1.25em;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+nav ul a::before{
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--varb);
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+    transform-origin: right;
+}
+
+nav ul a:hover::before{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/*****************************Catalogue************************************/
+
+.container{
+    max-width: 1300px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.project_image{
+    width:100%;
+    height: 250px;
+}
+
+
+.container h2{
+    padding: 0;
+    margin: 0 0 50px;
+    color: var(--varb);
+    text-align: center;
+    font-size: 2rem;
+}
+
+.project h2{
+    padding: 0;
+    margin: 0 0 5px;
+    color: var(--varb);
+    text-align: center;
+    font-size: 2rem;
+}
+
+.project p{
+    padding: 0;
+    margin: 0;
+    color: var(--varb);
+    text-align: center;
+}
+
+.project{
+    margin-bottom: 20px;
+}
+
+.catalogue{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 20px;
+}
+
+/*****************************Media Queries************************************/
+
+@media(max-width: 800px){
+
+    .toggleMenu{
+        display: flex;
+        cursor: pointer;
+        background-color: transparent;
+        background-image: url(./img/lister.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 30px;
+        width: 30px;
+        height: 30px;
+        border: 0;
+        z-index: 1000;
+        transition: background-size 0.3s ease-in-out;
+        -webkit-transition: background-size 0.3s ease-in-out;
+        -moz-transition: background-size 0.3s ease-in-out;
+        -ms-transition: background-size 0.3s ease-in-out;
+        -o-transition: background-size 0.3s ease-in-out;
+    }
+
+    .toggleMenu.active{
+        position: fixed;
+        right: 5%;
+        background-size: 25px;
+    }
+
+    nav{
+        position: absolute;
+        inset: 0;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        min-height: 0;
+        opacity: 0;
+        transform: scale(0);
+        -webkit-transform: scale(0);
+        -moz-transform: scale(0);
+        -ms-transform: scale(0);
+        -o-transform: scale(0);
+        transition: opacity 0.3s ease-in-out;
+        -webkit-transition: opacity 0.3s ease-in-out;
+        -moz-transition: opacity 0.3s ease-in-out;
+        -ms-transition: opacity 0.3s ease-in-out;
+        -o-transition: opacity 0.3s ease-in-out;
+    }
+
+    nav.active{
+        position: fixed;
+        min-height:100%;
+        opacity: 1;
+        background: var(--varn);
+        z-index: 999;
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+    }
+
+    nav ul{
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+    .btn{
+        display: none;
+    }
+
+    .project_image{
+        width:100%;
+        height: auto;
+    }
+}
+
+@media screen and (min-width:640px) {
+    .catalogue{
+        grid-template-columns: repeat(4, 1fr)
+    }
+    
+}
